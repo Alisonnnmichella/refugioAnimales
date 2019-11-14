@@ -12,7 +12,7 @@
                 <th class="left">Edad</th>
                 <th class="left">´Descripción´</th>
                 <th class="left">Acciones</th>
-                <th class="left">Borrar</th>
+               
             </tr>
         </thead>
 
@@ -23,15 +23,17 @@
                 <td class="left">{{mascota.tipo}}</td>
                 <td class="left">{{mascota.edad}}</td>
                 <td class="left">{{mascota.descripcion}}</td>
-                <td class="left"><a [routerLink]="['/mascotas-editar', mascota.id]">
-                        <clr-icon shape="pencil" class="is-highlight"> </clr-icon>
-                    </a>
-                </td>
-                <td class="left">
-                    <button type="submit" (click)="borrar(mascota.id)">
-                        <clr-icon shape="trash" class="is-inverse" class="is-solid" class="is-error"></clr-icon>
-                    </button>
-                </td>
+                <div class="btn-group btn-primary">
+                    <td class="left"><a [routerLink]="['/mascotas-editar', mascota.id]">
+                            <clr-icon shape="pencil" class="is-highlight"> </clr-icon>
+                        </a>
+                    </td>
+                    <td class="left">
+                        <button type="submit" (click)="borrar(mascota.id)">
+                            <clr-icon shape="trash" class="is-inverse" class="is-solid" class="is-error"></clr-icon>
+                        </button>
+                    </td>
+                </div>
             </tr>
 
         </tbody>
