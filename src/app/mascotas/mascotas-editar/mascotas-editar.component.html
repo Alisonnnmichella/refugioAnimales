@@ -1,0 +1,37 @@
+<form [formGroup]="profileForm" class=" clr-form clr-form-horizontal" (ngSubmit)="onSubmit()">
+
+
+    <clr-input-container>
+        <label>Nombre</label>
+        <input clrInput type="text" formControlName="nombre" />
+        <clr-icon shape="user"></clr-icon>
+        <clr-icon shape="user"></clr-icon>
+        <clr-control-error>Debe ingresar el nombre</clr-control-error>
+    </clr-input-container>
+
+
+    <clr-input-container>
+        <label>Tipo</label>
+        <input clrInput type="text" formControlName="tipo" />
+
+        <clr-control-error>Debe ingresar el tipo</clr-control-error>
+    </clr-input-container>
+
+
+    <clr-input-container>
+        <label>Edad</label>
+        <input clrInput type="text" formControlName="edad" />
+        <clr-control-error>Debe ingresar la edad</clr-control-error>
+    </clr-input-container>
+
+
+    <clr-input-container>
+        <label>Descripcion</label>
+        <input clrInput type="text" formControlName="descripcion" />
+        <clr-control-error>Debe ingresar la ´descripción´</clr-control-error>
+    </clr-input-container>
+<br>
+    <button type="submit"  class="btn btn-success" [disabled]="!profileForm.valid">Actualizar</button>
+    <button type="button" class="btn btn-outline"  (click)="cancelar()">Cancelar</button>
+</form>
+

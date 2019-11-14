@@ -7,7 +7,7 @@ import { Mascota } from './mascota';
 })
 export class MascotasService {
   private baseUrl:String = "http://localhost:8090/mascotas";
-  
+    
   constructor(private httpClient: HttpClient) { }
 
 public getMascotas(){
@@ -17,5 +17,11 @@ return this.httpClient.get<Array<Mascota>>(`${this.baseUrl}`);
 public addMascota(mascota: Mascota){
   return this.httpClient.post<Mascota>(`${this.baseUrl}`,mascota);
 }
+public getMascota(id:number){
+  return this.httpClient.get<Mascota>(`${this.baseUrl}/${id}`);
+  }
+public editarMascota(mascota:Mascota){
+  return this.httpClient.put<Mascota>(`${this.baseUrl}`,mascota);
+}  
 
 }
