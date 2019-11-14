@@ -14,9 +14,20 @@ public mascotas:Array<Mascota> = [];
 constructor(private mascotasService: MascotasService,private router:Router) { }
 
   ngOnInit() {
+   this.obtenerMascotas();
+  }
+  obtenerMascotas():void{
     this.mascotasService.getMascotas().subscribe((data)=>{
       this.mascotas = data; })
   }
+  borrar(id:number):void{
+    this.mascotasService.borrarMascota(id).subscribe( data=>
+    {
+      this.obtenerMascotas();
+      this.router.navigate(['/mascotas-listar']);
+    });
+    
+ }
 
 
 }
