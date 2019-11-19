@@ -5,4 +5,5 @@ export interface Mascota {
     tipo:String;
     edad:number;
     descripcion:string;
+    url:string;
 }

@@ -1,0 +1,26 @@
+<h2>Clickea en las mascotas!</h2>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th class="left">Nombre</th>
+            <th class="left">Tipo</th>
+            <th class="left">Edad</th>
+            <th class="left">´Descripción´</th>
+         
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let mascota of mascotas"  [routerLink]="['/mascotas-tarjeta', mascota.id]" >
+               
+            <td class="left">{{mascota.nombre}}</td>
+            <td class="left">{{mascota.tipo}}</td>
+            <td class="left">{{mascota.edad}}</td>
+            <td class="left">{{mascota.descripcion}}</td>
+
+      
+        </tr>
+    </tbody>
+</table>

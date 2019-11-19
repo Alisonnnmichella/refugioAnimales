@@ -30,6 +30,13 @@
         <input clrInput type="text" formControlName="descripcion" />
         <clr-control-error>Debe ingresar la ´descripción´</clr-control-error>
     </clr-input-container>
+
+    
+    <clr-input-container>
+        <label>Imagen</label>
+        <input clrInput type="text" formControlName="url" />
+        <clr-control-error>Debe ingresar la url de la imagen</clr-control-error>
+    </clr-input-container>
 <br>
     <button type="submit"  class="btn btn-success" [disabled]="!profileForm.valid">Submit</button>
     <button type="reset"  class="btn btn-primary" (click)="limpiar()">Limpiar</button>

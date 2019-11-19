@@ -18,7 +18,9 @@ export class MascotasAgregarComponent implements OnInit {
     nombre: ['',Validators.required],
     tipo: ['',Validators.required],
     descripcion:['',Validators.required],
-    edad:['',[Validators.pattern('[0-9]*'),Validators.max(80),Validators.required]]
+    edad:['',[Validators.pattern('[0-9]*'),Validators.max(80),Validators.required]],
+    url:['https://images.all-free-download.com/images/graphiclarge/16_pet_vector_silhouettes_120110.jpg',Validators.required]
+
     });
   ngOnInit() {
    
